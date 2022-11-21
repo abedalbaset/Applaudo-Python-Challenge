@@ -33,7 +33,7 @@ Applaudo Python Challenge
 # Notes
 * if your chrome version is different than 107.0 then you need to install chromedriver from this link https://chromedriver.storage.googleapis.com/index.html 
 And also you need to modified hex code of chrome driver to bypass the bot detection but if your chrome is 107.0 you can use chromdriver3.exe in this project for windows OS
-* This project to demonstrate the main concept not all cases was consider
+* This project to demonstrate the main concept and not all cases was consider
 
 
 # Explaining what happen when you run it
