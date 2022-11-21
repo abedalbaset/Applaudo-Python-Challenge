@@ -1,0 +1,45 @@
+Applaudo Python Challenge
+
+# About this project
+* This project is bot to start scraping and auto add the product to the basket for two stores Nike (www.nike.com) and Uniqlo (www.uniqlo.com)
+ and read information of the product and store it in output file [data.csv] 
+
+
+# Infrastructure files
+* You can check the picture under name "Applaudo challenge infrastructure.svg" to see how files and infrastructure organized
+* The main program in this project is under name "applaudo_main.py" and config.py is to setup the startup product url and user information 
+* Websites we deal with render most of contents using javascript so selenium or splash library will used additionally to Scrapy , in this project we selected selenium 
+* Since we use selenium then webdriver like chromdriver3.exe we are use with chrome version Version 107.0.5304.107 (Official Build) (64-bit)
+* The chromdriver3.exe is hex modified to by pass bot detection 
+* config_example2.py its additionally example for uniqlo.com product
+
+
+# Requirements 
+* Python 3.6+
+* Scrapy
+* chrome version Version 107.0.5304.107
+* selenium
+
+
+# How to run this project 
+* modified the config.py according to need to represent the inputs data
+* Navigate to the project location in the terminal and run the command "python applaudo_main.py"
+
+
+# Cases was consider in this project
+* if color in uniqlo product not found the program will ask you if you want to continue or not 
+* if size not available the program will end 
+
+# Notes
+* if your chrome version is different than 107.0 then you need to install chromedriver from this link https://chromedriver.storage.googleapis.com/index.html 
+And also you need to modified hex code of chrome driver to bypass the bot detection but if your chrome is 107.0 you can use chromdriver3.exe in this project for windows OS
+* This project to demonstrate the main concept not all cases was consider
+
+
+# Explaining what happen when you run it
+* First its start in applaudo_main.py the main function which will detect if the start url which store then will send it to nike_process.py or uniqlo_process.py 
+* Each one handle little different since the classes, id and the process of shopping are different 
+* The selenium will load the page with javascript rendering and handle the click actions 
+* Over time selenium send the results browser data to scrapy to handle the body and decoded to objects then store what need to dict 
+* At the end dict convert to json and store it line by line in the csv file data.csv
+
